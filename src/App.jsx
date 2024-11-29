@@ -2,10 +2,10 @@ import { useState } from "react";
 import "./App.css";
 import { InputBox } from "./components";
 import useCurrencyInfo from "./hooks/useCurrencyInfo";
-import money from "./assets/money.jpg";
+// import money from "./assets/money.jpg";
 
 function App() {
-  const BackgroundImage = money;
+  // const BackgroundImage = money;
   const [amount, setAmount] = useState(1);
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("inr");
@@ -38,7 +38,7 @@ function App() {
     <div
       className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
       style={{
-        backgroundImage: `url('${BackgroundImage}')`,
+        backgroundImage: `url('/money.jpg')`,
       }}
     >
       <div className="w-full">
@@ -81,6 +81,7 @@ function App() {
               onCurrencyChange={(currency)=> setTo(currency)}
               selectCurrency={to} 
               amountDisabled={true}
+              // currencyDisabled={true}
               />
             </div>
             {/* CONVERTER button */}
